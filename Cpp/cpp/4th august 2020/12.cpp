@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
   float side;
-  cout << "Calculate the volume of a cube :\n---------------------------------------"
+  cout << "Calculate the volume of a cube :\n---------------------------------------\n";
   cout << "Enter side length: ";
   cin >> side;
   cout << "The volume of the cube is" << side*side*side;
