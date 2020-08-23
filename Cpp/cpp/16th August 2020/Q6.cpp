@@ -1,26 +1,24 @@
 #include<iostream>
-
 using namespace std;
-
-int main()
-{
-    int start,end;
-    cout << "Enter the start and ending values: ";
-    cin>>start;
-    cin>>end;
-
-    for(int j=start;j<=end;j++)
-    {
-        for(int i=2;i<j;i++)
+int main(){
+    int i,j,min,max,count,rem;
+     cout<<" Enter first number in range: ";
+     cin>>min;
+     cout<<"\n Enter last number in range: ";
+     cin>>max;
+     cout<<endl<< "The prime numbers between "<< min <<" and "<< max <<" are: " <<endl;
+    for(i=min;i<=max;i++)
+    {   count=0;
+        for(j=1;j<=i;j++)
         {
-            bool flag = false;
-            if(j%i==0)
+            rem=i%j;
+            if(rem==0)
             {
-                flag=true;
+                count++;
             }
-
-            
         }
+        if(count==2)
+           cout << i << endl;
+
     }
-    return 0;
 }

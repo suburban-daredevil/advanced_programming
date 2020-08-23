@@ -3,17 +3,17 @@
 //#include<time.h>
 
 using namespace std;
-
-time_t test_var = time(0);
+                                            //time_t time (time_t* timer);  passing 0 to time function instead of object
+//time_t test_var = time(0);                  //returns system time in seconds
 
 int main()
 {
     cout << "Display the Current Date and Time :\n ---------------------------------------- \n";
-    time_t tt;
-    struct tm *ti;
+    time_t tt;                              //declare variable to recieve time
+    struct tm *ti;                          //standard defined structure that stores localtime
 
-        time (&tt);
-        ti = localtime(&tt);
+        time (&tt);                         //get system time and store in tt
+        ti = localtime(&tt);               //converts system time to UTC format
 
         cout << "\nseconds = " << ti->tm_sec;
         cout << "\nminutes x = " << ti->tm_min;

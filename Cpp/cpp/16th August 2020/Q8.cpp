@@ -2,27 +2,30 @@
 
 using namespace std;
 
-int main()
-{
-    int num;
-    cout << "Enter number: ";
-    cin >> num;
+int main(){
 
-    int flag=0, i=num-1;
+    int i,j,max,count,rem,max2;
 
-    while((i>1) && (flag==0))
-    {
-        for(int j=2;j<i;j++)
+    cout<<"\n Enter number: ";
+    cin>>max;
+
+    cout<<"Largest prime before number is: "<<max<<" is: ";
+
+    for(i=1;i<max;i++)
+    {   count = 0;
+
+        for(j=1;j<=i;j++)
         {
-            if(i%j==0)
-            flag=1;
-            cout<<i<<endl;
+            rem=i%j;
+            if(rem==0)
+            {
+                count++;
+            }
         }
+        if(count==2)
+           max2=i;
 
-        if(flag!=1)
-        i++;
     }
-
-    cout << "The prime closest to " << num << " is " << i;
+    cout << max2;
     return 0;
 }

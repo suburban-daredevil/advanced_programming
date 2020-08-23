@@ -4,24 +4,24 @@ using namespace std;
 
 int main()
 {
-    long int num;
-    int arr[10] = {0,0,0,0,0,0,0,0,0,0};
-    cout<<"Input a number: ";
-    cin >> num;
+    char bin_num[8];
+    cout<<"Enter a binary number of 8 bits: ";
+    cin.getline(bin_num,8);
 
-    long int n=num; int rem;
-    while(n>0)
+    for(int i=0;i<8;i++)
     {
-        rem = n%10;
-        n = n/10;
+        if(bin_num[i]=='0')  bin_num[i]='1';
 
-        arr[rem]+=1;
+        else if(bin_num[i]=='1')   bin_num[i]='0';
+
+        /*else {
+            cout<<"Invalid input, please enter a binary number." << endl;
+            return -1;
+        }*/
+
     }
 
-    for(int i=0;i<10;i++)
-    {
-        cout<<"The frequency of " << i << " is: " << arr[i] << endl;
-    }
-
+    cout<<"The ones complement of given binary number is: " << bin_num;
+    
     return 0;
 }
