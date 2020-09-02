@@ -14,14 +14,14 @@ class Employee
 			cin >> eno;
 
 			cout << "Enter name: ";
-			cin.get(name,20);
+			cin >> name;
 
-			cout << "Enter description: ";
-			cin.get(des,20);
+			cout << "Enter designation: ";
+			cin >> des;
 
 		}
 };
-
+//public private
 class salary: protected Employee
 {	//public:
 	float basicpay, hra, da, pf, netpay;
@@ -39,6 +39,10 @@ class salary: protected Employee
 
 		netpay = basicpay+(basicpay*hra)+(basicpay*da)+(basicpay*pf);
 
+		cout << "----------------------------------------------";
+		cout << "Name: " << name << endl;
+		cout << "Employee no: " << eno << endl;
+		cout << "Designation: " << des << endl;
 		cout << "Netpay: " << netpay << endl;
 	}
 
@@ -68,6 +72,6 @@ of the subclass.
 
 If the inheritance mode is changed from protected to public, the members inherited
 will still be inherited in the subclass as protected members. To change this behaviour the
-access specifiers will also need modification as public. 
+access specifiers will also need modification as public.
 
 */
