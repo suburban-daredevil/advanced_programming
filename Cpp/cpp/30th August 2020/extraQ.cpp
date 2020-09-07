@@ -21,7 +21,7 @@ int main()
 			cin>>arr[j];
 		}
 
-		int largest = arr[0];
+		int largest = INT_MIN;
 
 		for(int j=0;j<N;j++)
 		{
